@@ -1,12 +1,12 @@
 {
-  "name": "cig/track-session",
+  "name": "ilya_cig/track-session",
   "description": "Track Session",
   "autoload": {
     "psr-4": {
-      "Cig\\TrackSession\\": "src/"
+      "CIG\\TrackSession\\": "src/"
     }
   },
-  "license" : "MIT",
+  "license": "MIT",
   "authors": [
     {
       "name": "Ilya Martinkevich",
@@ -24,5 +24,17 @@
     "allow-plugins": {
       "dealerdirect/phpcodesniffer-composer-installer": true
     }
-  }
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "CIG\\TrackSession\\Providers\\TrackSessionServiceProvider"
+      ],
+      "aliases": {
+        "TrackSession": "CIG\\TrackSession\\Facades\\TrackSessionFacade"
+      }
+
+    }
+  },
+  "minimum-stability": "stable"
 }
