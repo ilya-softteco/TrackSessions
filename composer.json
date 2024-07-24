@@ -1,0 +1,28 @@
+{
+  "name": "cig/track-session",
+  "description": "Track Session",
+  "autoload": {
+    "psr-4": {
+      "Cig\\TrackSession\\": "src/"
+    }
+  },
+  "license" : "MIT",
+  "authors": [
+    {
+      "name": "Ilya Martinkevich",
+      "email": "i.martinkevich@softteco.com"
+    }
+  ],
+  "require": {
+    "php": "^8.2"
+  },
+  "require-dev": {
+    "nunomaduro/phpinsights": "^2.11",
+    "laravel/framework": "^11.17"
+  },
+  "config": {
+    "allow-plugins": {
+      "dealerdirect/phpcodesniffer-composer-installer": true
+    }
+  }
+}
