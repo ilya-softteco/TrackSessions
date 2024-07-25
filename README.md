@@ -1,19 +1,74 @@
+TrackSession
+===
+
+This is a simple Laravel package to track a user's session anywhere in the code.
+
+Installation
+------------
+
+Install using composer:
+
+```bash
+composer require ilya_cig/track-session:dev-master
+```
+
+Run migrations:
+
 ```php 
 php artisan migrate --path=/vendor/ilya_cig/track-session/database/migrations/2024_07_24_123500_create_track_session_table.php
 ```
 
-```php 
-composer require ilya_cig/track-session:dev-master
-```
 
-Add the service provider in `config/app.php`:
+(optional) Add the service provider in `config/app.php`:
 
 ```php
 CIG\TrackSession\Providers\TrackSessionServiceProvider::class,
 ```
 
-And add the Agent alias to `config/app.php`:
+(optional) And add the Agent alias to `config/app.php`:
 
 ```php
 'TrackSession' => CIG\TrackSession\Facades\TrackSessionFacade::class,
 ```
+
+Basic Usage
+-----------
+
+If you want track session just use:
+
+
+```php
+use TrackSession;
+
+TrackSession::track();
+```
+### OR
+
+
+```php
+use CIG\TrackSession\Facades\TrackSessionFacade;
+
+TrackSession::track();
+```
+
+### OR
+
+
+```php
+use CIG\TrackSession\Services\TrackSessionServices;
+
+$trackSession = new TrackSessionServices();
+$trackSession->track();
+```
+
+### OR
+```php
+use Illuminate\Support\Facades\App;
+$trackSession = App::make('track.session');
+$trackSession->track();
+```
+
+# License
+
+TrackSession is licensed under [The MIT License (MIT)](LICENSE).
+
