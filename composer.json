@@ -6,6 +6,13 @@
       "CIG\\TrackSession\\": "src/"
     }
   },
+
+  "autoload-dev": {
+    "psr-4": {
+      "CIG\\TrackSession\\Tests\\": "tests/"
+    }
+  },
+
   "license": "MIT",
   "authors": [
     {
@@ -16,10 +23,7 @@
   "require": {
     "php": "^8.2"
   },
-  "require-dev": {
-    "nunomaduro/phpinsights": "^2.11",
-    "laravel/framework": "^11.17"
-  },
+
   "config": {
     "allow-plugins": {
       "dealerdirect/phpcodesniffer-composer-installer": true
@@ -36,5 +40,8 @@
 
     }
   },
-  "minimum-stability": "stable"
+  "minimum-stability": "stable",
+  "require-dev": {
+    "orchestra/testbench": "^9.2"
+  }
 }

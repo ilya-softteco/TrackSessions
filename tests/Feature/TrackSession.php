@@ -1,6 +1,6 @@
 <?php
 
-namespace Tests\Feature;
+namespace CIG\TrackSession\Tests\Feature;
 
 use Tests\TestCase;
 
