@@ -1,4 +1,5 @@
 <?php
+
 declare(strict_types=1);
 
 namespace CIG\TrackSession\Services;
@@ -7,8 +8,7 @@ use CIG\TrackSession\Models\TrackSession;
 
 class TrackSessionServices
 {
-
-    public function track()
+    public function track(): void
     {
         TrackSession::updateOrCreate(
             [

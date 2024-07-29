@@ -1,4 +1,5 @@
 <?php
+
 declare(strict_types=1);
 
 use Illuminate\Database\Migrations\Migration;
@@ -11,7 +12,7 @@ return new class extends Migration {
      */
     public function up(): void
     {
-        Schema::create('track_sessions', function (Blueprint $table) {
+        Schema::create('track_sessions', function (Blueprint $table): void {
             $table->id();
             $table->string('session_id')->nullable()->unique();
             $table->string('user_agent')->nullable();
