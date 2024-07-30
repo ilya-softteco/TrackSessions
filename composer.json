@@ -42,6 +42,7 @@
   },
   "minimum-stability": "stable",
   "require-dev": {
-    "orchestra/testbench": "^9.2"
+    "orchestra/testbench": "^9.2",
+    "nunomaduro/phpinsights": "^2.11"
   }
 }
