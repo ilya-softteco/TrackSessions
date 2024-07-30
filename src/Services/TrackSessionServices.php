@@ -8,9 +8,10 @@ use CIG\TrackSession\Models\TrackSession;
 
 class TrackSessionServices
 {
-    public function track(): void
+    public function track()
     {
-        TrackSession::updateOrCreate(
+
+        return TrackSession::updateOrCreate(
             [
                 'session_id' => session()->getId()
             ],

@@ -48,7 +48,7 @@ TrackSession::track();
 ```php
 use CIG\TrackSession\Facades\TrackSessionFacade;
 
-TrackSession::track();
+TrackSessionFacade::track();
 ```
 
 ### OR
@@ -68,7 +68,25 @@ $trackSession = App::make('track.session');
 $trackSession->track();
 ```
 
+### OR
+
+```php
+use CIG\TrackSession\Jobs\TrackSession;
+TrackSession::dispatch();
+```
+
 # License
 
 TrackSession is licensed under [The MIT License (MIT)](LICENSE).
 
+
+
+# Testing
+
+```bash
+vendor/bin/testbench  migrate
+```
+
+```bash
+./vendor/bin/phpunit --filter test_save_in_table  tests/Feature/TrackSession.php
+```

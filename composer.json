@@ -6,13 +6,11 @@
       "CIG\\TrackSession\\": "src/"
     }
   },
-
   "autoload-dev": {
     "psr-4": {
       "CIG\\TrackSession\\Tests\\": "tests/"
     }
   },
-
   "license": "MIT",
   "authors": [
     {
@@ -23,7 +21,6 @@
   "require": {
     "php": "^8.2"
   },
-
   "config": {
     "allow-plugins": {
       "dealerdirect/phpcodesniffer-composer-installer": true
@@ -37,7 +34,6 @@
       "aliases": {
         "TrackSession": "CIG\\TrackSession\\Facades\\TrackSessionFacade"
       }
-
     }
   },
   "minimum-stability": "stable",
